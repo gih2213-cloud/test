@@ -6,6 +6,7 @@ create table if not exists public.applications (
   created_at  timestamptz not null default now(),
   name        text not null,
   email       text not null,
+  phone       text,
   department  text,
   program     text not null,          -- 입문반 / 실전반 / 심화반 (실제 배포된 테이블 컬럼명)
   message     text

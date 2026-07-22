@@ -96,6 +96,7 @@ export default function AdminPage() {
                   <th>신청일시</th>
                   <th>이름</th>
                   <th>이메일</th>
+                  <th>핸드폰 번호</th>
                   <th>소속 부서</th>
                   <th>신청 과정</th>
                   <th>하고 싶은 말</th>
@@ -109,6 +110,7 @@ export default function AdminPage() {
                     </td>
                     <td>{r.name}</td>
                     <td>{r.email}</td>
+                    <td>{r.phone || <span className="muted">-</span>}</td>
                     <td>{r.department || <span className="muted">-</span>}</td>
                     <td>
                       <span className="badge">{r.program}</span>

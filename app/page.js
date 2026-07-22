@@ -10,6 +10,7 @@ export default function ApplyPage() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     department: "",
     course: COURSES[0],
     message: "",
@@ -43,6 +44,7 @@ export default function ApplyPage() {
     const { error: insertError } = await supabase.from("applications").insert({
       name: form.name.trim(),
       email: form.email.trim(),
+      phone: form.phone.trim() || null,
       department: form.department.trim() || null,
       program: form.course,
       message: form.message.trim() || null,
@@ -60,6 +62,7 @@ export default function ApplyPage() {
     setForm({
       name: "",
       email: "",
+      phone: "",
       department: "",
       course: COURSES[0],
       message: "",
@@ -122,6 +125,18 @@ export default function ApplyPage() {
                   onChange={(e) => update("email", e.target.value)}
                   placeholder="you@example.com"
                   required
+                />
+              </div>
+
+              <div className="field">
+                <label htmlFor="phone">핸드폰 번호</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  inputMode="numeric"
+                  value={form.phone}
+                  onChange={(e) => update("phone", e.target.value)}
+                  placeholder="010-1234-5678"
                 />
               </div>
 
