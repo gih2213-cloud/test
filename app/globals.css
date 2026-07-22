@@ -1,0 +1,410 @@
+:root {
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --gray-50: #f8fafc;
+  --gray-200: #e2e8f0;
+  --gray-400: #94a3b8;
+  --gray-600: #475569;
+  --gray-800: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: var(--gray-800);
+  background: linear-gradient(160deg, var(--blue-50) 0%, #ffffff 55%);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px 64px;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+  padding: 32px 28px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.brand h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--blue-700);
+  letter-spacing: -0.5px;
+}
+
+.brand p {
+  margin-top: 8px;
+  color: var(--gray-600);
+  font-size: 14px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: var(--gray-800);
+}
+
+.field label .req {
+  color: #ef4444;
+  margin-left: 3px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--blue-500);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px var(--blue-100);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--blue-600);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.btn:hover {
+  background: var(--blue-700);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  background: var(--gray-400);
+  cursor: not-allowed;
+}
+
+.alert {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* 완료 화면 */
+.success {
+  text-align: center;
+  padding: 20px 8px;
+}
+
+.success .check {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  margin: 0 auto 18px;
+}
+
+.success h2 {
+  font-size: 22px;
+  color: var(--blue-700);
+  margin-bottom: 8px;
+}
+
+.success p {
+  color: var(--gray-600);
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.link-btn {
+  display: inline-block;
+  border: 1px solid var(--blue-200);
+  color: var(--blue-700);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link-btn:hover {
+  background: var(--blue-50);
+}
+
+/* ---------- 관리자 페이지 ---------- */
+.admin {
+  width: 100%;
+  max-width: 960px;
+}
+
+.admin-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-header h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue-700);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.stat {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat .num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--blue-600);
+}
+
+.stat .label {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.table-wrap {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+thead th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gray-600);
+  background: var(--blue-50);
+  padding: 12px 14px;
+  white-space: nowrap;
+}
+
+tbody td {
+  font-size: 14px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--gray-200);
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--gray-400);
+}
+
+.empty {
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--gray-600);
+}
+
+.topbar {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    padding: 26px 20px;
+  }
+}
+
+/* ---------- 신청 페이지 다크 테마 ---------- */
+.page-dark {
+  background: linear-gradient(160deg, #0b1220 0%, #0f172a 55%, #111827 100%);
+}
+
+.page-dark .card {
+  background: #111827;
+  border-color: #1f2937;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.page-dark .brand h1 {
+  color: #60a5fa;
+}
+
+.page-dark .brand p {
+  color: #94a3b8;
+}
+
+.page-dark .field label {
+  color: #e2e8f0;
+}
+
+.page-dark .field input,
+.page-dark .field select,
+.page-dark .field textarea {
+  background: #0b1220;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.page-dark .field input::placeholder,
+.page-dark .field textarea::placeholder {
+  color: #64748b;
+}
+
+.page-dark .field input:focus,
+.page-dark .field select:focus,
+.page-dark .field textarea:focus {
+  border-color: #3b82f6;
+  background: #0f172a;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.page-dark .btn {
+  background: #2563eb;
+}
+
+.page-dark .btn:hover {
+  background: #3b82f6;
+}
+
+.page-dark .btn:disabled {
+  background: #475569;
+}
+
+.page-dark .alert-error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.page-dark .success .check {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+.page-dark .success h2 {
+  color: #60a5fa;
+}
+
+.page-dark .success p {
+  color: #94a3b8;
+}
+
+.page-dark .link-btn {
+  background: transparent;
+  border-color: #334155;
+  color: #93c5fd;
+}
+
+.page-dark .link-btn:hover {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.page-dark .muted {
+  color: #64748b;
+}
