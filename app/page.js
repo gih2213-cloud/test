@@ -77,7 +77,7 @@ export default function ApplyPage() {
           <div className="success">
             <div className="check">✓</div>
             <h2>신청이 완료되었습니다</h2>
-            <p>바이브 AI 교육 신청이 정상적으로 접수되었습니다.</p>
+            <p>장애인 인식개선교육 신청이 정상적으로 접수되었습니다.</p>
             <button className="link-btn" onClick={resetForm}>
               추가로 신청하기
             </button>
@@ -85,7 +85,7 @@ export default function ApplyPage() {
         ) : (
           <>
             <div className="brand">
-              <h1>바이브 AI 교육 신청</h1>
+              <h1>장애인 인식개선교육 신청</h1>
               <p>아래 항목을 작성하고 신청해 주세요.</p>
             </div>
 

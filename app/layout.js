@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "바이브 AI 교육 신청",
-  description: "바이브 AI 교육 과정 신청 접수 시스템",
+  title: "장애인 인식개선교육 신청",
+  description: "장애인 인식개선교육 신청 접수 시스템",
 };
 
 export const viewport = {
